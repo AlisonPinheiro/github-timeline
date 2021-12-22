@@ -1,17 +1,21 @@
 import './index.css'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import moment from 'moment'
 
-const resetForm = (event) => {
-  document.querySelector('.rb-container').remove()
-  document.querySelector('form').reset()
-  event.preventDefault();
-}
-
 const TimeLine = (data) => {
+  const [newData, setNewData] = useState(Object.values(data))
 
-  const [newData] = Object.values(data)
-  console.log(newData, 'data')
+  useEffect(() => {
+    setNewData(Object.values(data))
+  }, [data])
+
+  const resetForm = (event) => {
+    setNewData(null)
+    document.querySelector('form').reset()
+    event.preventDefault();
+  }
+
+  if (!newData) return null
   const owner = newData[0].owner
   return (
     <>
@@ -27,7 +31,7 @@ const TimeLine = (data) => {
             </div> : ''
         }
         <ul className='rb'>
-          {newData.map((item, index) => {
+          {newData[0].map((item, index) => {
             return (
               <li key={index} className='rb-item'>
                 <div className='timestamp'>{moment(item.created_at).format('DD/MM/YYYY')} </div>

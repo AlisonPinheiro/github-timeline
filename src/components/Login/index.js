@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TimeLine from '../TimeLine'
 import "./index.css";
 
+
 const Login = () => {
   const [data, setData] = useState(null);
 
@@ -48,7 +49,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="content">
+      <div className="content ">
         <form onSubmit={submitForm}>
           <div className="form-header">
             <h1>GitHub Timeline</h1>

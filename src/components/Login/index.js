@@ -45,8 +45,6 @@ const Login = () => {
     getData(userName)
   }
 
-  console.log(data, 'aqui')
-
   return (
     <>
       <div className="content ">

@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# GitHub TimeLine
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+this project was developed with the challenge of [@florinpop17](https://github.com/florinpop17/app-ideas/blob/master/Projects/3-Advanced/GitHub-Timeline-App.md).
 
 ## Available Scripts
 
